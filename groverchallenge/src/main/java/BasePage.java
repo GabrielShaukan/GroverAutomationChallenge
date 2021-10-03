@@ -1,14 +1,14 @@
 import org.openqa.selenium.WebDriver;
 
-public class BasePage {
+public abstract class BasePage {
 
     WebDriver driver;
     String url;
 
-    public BasePage(WebDriver driver, String url) {
+    /*public BasePage(WebDriver driver, String url) {
         this.driver = driver;
         this.url = url;
-    }
+    }*/
 
     public WebDriver getDriver() {
         return driver;
