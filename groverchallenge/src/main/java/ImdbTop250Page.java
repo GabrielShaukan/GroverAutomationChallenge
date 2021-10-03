@@ -52,6 +52,11 @@ public class ImdbTop250Page extends BasePage {
 
     }
 
+    public void clickWesternGenreLink() {
+        westernGenreLink.click();
+    }
+
+
 
 
 
