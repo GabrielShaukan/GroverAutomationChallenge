@@ -4,6 +4,13 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * @GabrielShaukan
+ *
+ * Test cases to validate sorting options on the "Top 250 Movies" Page
+ *
+ */
+
 public class ImdbTop250PageTests {
 
     static WebDriver driver;
