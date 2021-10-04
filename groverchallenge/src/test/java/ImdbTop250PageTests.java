@@ -11,18 +11,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  */
 
-public class ImdbTop250PageTests {
+public class ImdbTop250PageTests extends BasePageTest {
 
-    static WebDriver driver;
     private static ImdbTop250Page imdbTopRankPage;
 
     @BeforeClass
     public static void init() throws Exception {
 
-        System.setProperty("webdriver.chrome.driver","src\\test\\Resources\\chromedriver.exe");
-        driver = new ChromeDriver();
+        initDriver();
 
-        imdbTopRankPage = new ImdbTop250Page(driver, "https://www.imdb.com/chart/top");
+        imdbTopRankPage = new ImdbTop250Page(driver, getConfigValue("url"));
         imdbTopRankPage.openPage();
     }
 

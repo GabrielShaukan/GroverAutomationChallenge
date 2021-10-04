@@ -11,17 +11,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
  *
  */
 
-public class TopWesternMoviesPageTests {
-    public static WebDriver driver;
+public class TopWesternMoviesPageTests extends BasePageTest {
     public static ImdbTop250Page imdbTop250Page;
     public static TopWesternMoviesPage topWesternMoviesPage;
 
     @BeforeClass
     public static void initializeDriver(){
-        System.setProperty("webdriver.chrome.driver","src\\test\\Resources\\chromedriver.exe");
-        driver = new ChromeDriver();
+        initDriver();
 
-        imdbTop250Page = new ImdbTop250Page(driver, "https://www.imdb.com/chart/top");
+        imdbTop250Page = new ImdbTop250Page(driver, getConfigValue("url"));
         imdbTop250Page.openPage();
         imdbTop250Page.clickWesternGenreLink();
 
@@ -36,7 +34,7 @@ public class TopWesternMoviesPageTests {
 
     @Test
     //using a for loop instead of a while loop due to 'Stale element reference'
-    //There are changes to the web elements after collecting them, therfore we have to create elements on the go
+    //There are changes to the web elements after collecting them, therefore we have to create elements on the go
     public  void shouldReturnAtLeastOneMovieForAllSortingOptions() {
         for (int i = 0; i < topWesternMoviesPage.getSortByOptions().size(); i++) {
             topWesternMoviesPage.clickSortByOption(topWesternMoviesPage.getSortByOptions().get(i));
