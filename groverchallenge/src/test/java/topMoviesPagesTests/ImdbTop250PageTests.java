@@ -1,8 +1,10 @@
+package topMoviesPagesTests;
+
+import abstractPageTest.BasePageTest;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import topMoviesPages.ImdbTop250Page;
 
 /**
  * @GabrielShaukan

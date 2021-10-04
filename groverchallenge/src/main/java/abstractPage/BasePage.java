@@ -1,3 +1,5 @@
+package abstractPage;
+
 import org.openqa.selenium.WebDriver;
 
 /**

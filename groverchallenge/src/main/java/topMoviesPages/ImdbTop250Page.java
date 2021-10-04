@@ -1,3 +1,6 @@
+package topMoviesPages;
+
+import abstractPage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +13,7 @@ import java.util.List;
 /**
  * @GabrielShaukan
  *
- * This class extends the BasePage and contains Web elements and methods
+ * This class extends the abstractPage.BasePage and contains Web elements and methods
  * of the "top 250 Movies" page used for the test cases.
  *
  * This Page Object Model design pattern allows modular and dyanmic test

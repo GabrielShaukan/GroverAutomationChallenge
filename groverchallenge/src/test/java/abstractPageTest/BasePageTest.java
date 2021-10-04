@@ -1,3 +1,6 @@
+package abstractPageTest;
+
+import configClasses.InitializeDriver;
 import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+
 
 public abstract class BasePageTest {
     protected static WebDriver driver;
