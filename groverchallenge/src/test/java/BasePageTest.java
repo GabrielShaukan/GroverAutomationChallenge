@@ -13,9 +13,7 @@ public abstract class BasePageTest {
     protected static final String browserType = getConfigValue("url");
 
     public static void initDriver() {
-        System.setProperty("webdriver.chrome.driver","src\\test\\Resources\\webdrivers\\chromedriver.exe");
-        driver = new ChromeDriver();
-
+        driver = InitializeDriver.startWebDriver(getConfigValue("browser"));
     }
 
     public static String getConfigValue (String property) {
