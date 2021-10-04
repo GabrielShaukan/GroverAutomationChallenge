@@ -19,4 +19,9 @@ I used Selenium as the test automation framework with the unit testing framework
 Commits have been made as granular as possible, logging every significant changes made.  
 The tests are designed with the Page Object Model and Page Factory in mind. 
 Leveraging this design pattern allows for more modular and dynamic automated tests hench the support for a growing number of test cases in the future.
-The test suite currently supports three of the most popular web browsers in use today. Which browser is used for testing can be changed in the config file.
+The test suite currently supports three of the most popular web browsers in use today (Chrome, Firefox, MS Edge). Which browser is used for testing can be changed in the config file located at /src/test/resources/test.conf.
+
+Webdriver versions used:  
+Chrome: ChromeDriver 94.0.4606.61  
+Firefox: geckodriver 0.30.0  
+Edge: MSEdgeDriver 94.0.992.37  
