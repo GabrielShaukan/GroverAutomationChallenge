@@ -5,6 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+/**
+ * @GabrielShaukan
+ *
+ * Class for driver initialization
+ * Support for the three most popular browsers in use today: Chrome, Firefox, MS Edge
+ *
+ */
+
 public class InitializeDriver {
 
     private static WebDriver driver;

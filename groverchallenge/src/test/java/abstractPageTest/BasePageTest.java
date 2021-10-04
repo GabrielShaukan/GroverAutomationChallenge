@@ -3,13 +3,18 @@ package abstractPageTest;
 import configClasses.InitializeDriver;
 import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * @GabrielShaukan
+ *
+ * This an abstract page class test, that initializes the drivers and reads the config
+ *
+ */
 
 public abstract class BasePageTest {
     protected static WebDriver driver;

@@ -15,27 +15,27 @@ import topMoviesPages.ImdbTop250Page;
 
 public class ImdbTop250PageTests extends BasePageTest {
 
-    private static ImdbTop250Page imdbTopRankPage;
+    private static ImdbTop250Page imdbTop250Page;
 
     @BeforeClass
     public static void init() throws Exception {
 
         initDriver();
 
-        imdbTopRankPage = new ImdbTop250Page(driver, getConfigValue("url"));
-        imdbTopRankPage.openPage();
+        imdbTop250Page = new ImdbTop250Page(driver, getConfigValue("url"));
+        imdbTop250Page.openPage();
     }
 
     @Test
     public void shouldReturnAtLeastOneMovieInTop250List() {
-        Assert.assertTrue(imdbTopRankPage.getTop250MoviesList().size() > 0);
+        Assert.assertTrue(imdbTop250Page.getTop250MoviesList().size() > 0);
     }
 
     @Test
     public void shouldReturnAtLeastOneMovieForEachSortOption() {
         for (ImdbTop250Page.SortingDropDownOptions sortByOption: ImdbTop250Page.SortingDropDownOptions.values()) {
-            imdbTopRankPage.selectSortOption(sortByOption);
-            Assert.assertTrue(imdbTopRankPage.getTop250MoviesList().size() > 0);
+            imdbTop250Page.selectSortOption(sortByOption);
+            Assert.assertTrue(imdbTop250Page.getTop250MoviesList().size() > 0);
         }
     }
 }
